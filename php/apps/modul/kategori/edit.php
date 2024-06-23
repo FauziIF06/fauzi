@@ -1,5 +1,5 @@
 <?php
-$edit = $konek->query("SELECT * FROM kategori WHERE id='$_GET[id]'");
+$edit = $konek->query("SELECT * FROM kategori WHERE id='$_GET[id]' ");
 
 if ($edit->num_rows > 0) {
     $data = $edit->fetch_array();
@@ -8,13 +8,13 @@ if ($edit->num_rows > 0) {
 }
 ?>
 
-<form action="?page=kategori&act=update" method="post" >
-    <input type="hidden" name="id" value="<?php $data['id'] ?>">
+<form action="?page=kategori&act=update" method="post">
+    <input type="hidden" name="id" value="<?= $data['id'] ?>">
     <table class="table">
         <tr>
             <td>Nama Kategori</td>
-            <td><input type="text" name="kategori" class="form-control" value="<?= $data['name'] ?>"> </td>
+            <td><input type="text" name="kategori" class="form-control" value="<?= $data['name'] ?>"></td>
         </tr>
     </table>
-    <input type="submit" value="simpan" class="btn btn-primary">
+    <input type="submit" value="Simpan" class="btn btn-primary ">
 </form>
