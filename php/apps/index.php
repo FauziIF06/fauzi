@@ -36,9 +36,11 @@ if (empty($_SESSION['oke'])) {
                     <li class="nav-item">
                         <a class="nav-link" href="?page=aktifitas">Aktifitas</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="?page=user">User</a>
                     </li>
+
                 </ul>
             </div>
             <div class="navbar-nav ml-auto">
