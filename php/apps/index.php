@@ -1,3 +1,12 @@
+<?php
+session_start();
+if ($_SESSION["username"] == "") {
+    header("Location: login.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +37,9 @@
                         <a class="nav-link" href="?page=produk">produk</a>
                     </li>
                 </ul>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="logout.php">Logout</a>
             </div>
         </nav>
         <div class="row mt-10">
