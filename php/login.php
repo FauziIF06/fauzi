@@ -28,12 +28,13 @@ if (isset($_POST["login"])) {
     // print($sql);
     // exit;
     $cek = $konek->query($sql);
-    if ($cek->fetch_array() > 0) {
+    if ($cek->num_rows > 0) {
         $row = $cek->fetch_array();
         session_start();
-        $_SESSION["username"] = $row["username"];
+        $_SESSION['username'] = $row['username'];
         // echo "<script>alert('Login Berhasil');window.location='index.php';</script>";
         header("location; index.php");
+        // echo $cek->num_rows;
     } else {
         echo "Login Gagal";
     }
