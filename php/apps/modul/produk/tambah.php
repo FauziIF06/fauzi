@@ -12,7 +12,7 @@
                     <?php
                     $query = $konek->query("SELECT * FROM kategori");
                     foreach ($query as $hasil) {
-                        echo"<option value='$hasil[id]'>$hasil[name]</option>";
+                        echo "<option value='$hasil[id]'>$hasil[name]</option>";
                     }
                     ?>
                 </select>
@@ -27,7 +27,7 @@
         <tr>
             <td>Satuan</td>
             <td><input type="text" name="satuan" class="form-control"></td>
-            <td>Stock</td>
+            <td>Stok</td>
             <td><input type="number" name="stock" class="form-control"></td>
         </tr>
     </table>

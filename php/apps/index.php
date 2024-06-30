@@ -1,12 +1,9 @@
 <?php
 session_start();
-if ($_SESSION["username"] == "") {
-    header("Location: login.php");
-    exit;
+if (empty($_SESSION['oke'])) {
+    header('location:login.php');
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -9,16 +9,19 @@
         <th>Nama produk</th>
         <th>Kategori</th>
         <th>Satuan</th>
-        <th>Harga_beli</th>
-        <th>Harga_jual</th>
-        <th>Stock</th>
+        <th>Harga Beli</th>
+        <th>Harga Jual</th>
+        <th>Stok</th>
         <th>Aksi</th>
     </thead>
     <tbody>
         <?php
-        $query = $konek->query("SELECT produk.*,kategori.name as kategori
-        FROM produk,kategori 
-        WHERE produk.kategori_id = kategori.id");
+        $query = $konek->query("select 
+                                produk.*,kategori.name as kategori
+                                from 
+                                produk,kategori 
+                                where 
+                                produk.kategori_id = kategori.id ");
         foreach ($query as $hasil) {
             echo "<tr>
                     <td>$hasil[id]</td>
