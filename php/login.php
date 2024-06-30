@@ -25,15 +25,15 @@ if (isset($_POST["login"])) {
     $user = trim($_POST["username"]);
     $pass = trim($_POST["password"]);
     $sql = "SELECT * FROM user WHERE username = '$user' AND password = '$pass' ";
-    print($sql);
-    exit;
+    // print($sql);
+    // exit;
     $cek = $konek->query($sql);
     if ($cek->fetch_array() > 0) {
         $row = $cek->fetch_array();
         session_start();
         $_SESSION["username"] = $row["username"];
         // echo "<script>alert('Login Berhasil');window.location='index.php';</script>";
-        // header("location; index.php");
+        header("location; index.php");
     } else {
         echo "Login Gagal";
     }
