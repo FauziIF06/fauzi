@@ -13,10 +13,12 @@
         // aktifitas berdasarkan siapa yang login
         // session_start();
         $id = $_SESSION['id'];
-        if(@$_SESSION['username'] == "admin") {
-            $query = $konek->query("SELECT aktifitas.*, user.username 
-                                FROM aktifitas 
-                                INNER JOIN user ON aktifitas.user_id=user.id");
+
+        if ($id == 1) {
+            $query = $konek->query("SELECT aktifitas.*, 
+                                    user.username 
+                                    FROM aktifitas.user");
+
         } else {
             $query = $konek->query("SELECT aktifitas.*, user.username 
                                 FROM aktifitas 
