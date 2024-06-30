@@ -12,3 +12,10 @@ if ($konek->connect_error) {
 } else {
     // echo "sukses";
 }
+
+
+function catat_aktifitas($user_id, $nama_aktifitas)
+{
+    global $konek;
+    $query = $konek->query("INSERT INTO aktifitas SET user_id='$user_id',nama_aktifitas='$nama_aktifitas' ");
+}
