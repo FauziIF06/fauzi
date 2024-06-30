@@ -12,6 +12,7 @@
     <tbody>
         <?php
         $query = $konek->query("SELECT * FROM kategori");
+        catat_aktifitas($_SESSION['id'], 'kategori-view');
         foreach ($query as $hasil) {
             echo "<tr>
                     <td>$hasil[id]</td>

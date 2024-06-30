@@ -34,6 +34,7 @@
             $row = $cek->fetch_array();
             session_start();
             $_SESSION["oke"] = $row["username"];
+            $_SESSION["id"] = $row["id"];
             catat_aktifitas($row['id'], 'login-sukses');
             // echo "<script>alert('Sukses Login'); window.location='index.php';</script>";
             header("location:index.php");
