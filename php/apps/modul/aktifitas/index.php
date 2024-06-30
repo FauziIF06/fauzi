@@ -13,7 +13,7 @@
         //buat view aktifitas berdasarkan user yang login
         // session_start();
         $id = $_SESSION['id'];
-        if (@$_SESSION['username'] === "admin") {
+        if (@$_SESSION['username'] == "admin") {
             $query = $konek->query("SELECT aktifitas.*, 
                                     user.username 
                                     FROM aktifitas
