@@ -24,7 +24,10 @@ if (isset($_POST["login"])) {
     include "koneksi.php";
     $user = trim($_POST["username"]);
     $pass = trim($_POST["password"]);
-    $cek = $konek->query("SELECT * FROM user WHERE username = '$user' AND password = '$pass' ");
+    $sql = "SELECT * FROM user WHERE username = '$user' AND password = '$pass' ";
+    print($sql);
+    exit;
+    $cek = $konek->query($sql);
     if ($cek->fetch_array() > 0) {
         $row = $cek->fetch_array();
         session_start();
