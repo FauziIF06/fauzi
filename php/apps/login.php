@@ -38,9 +38,9 @@
             $row = $cek->fetch_array();
             session_start();
             $_SESSION["username"] = $row["username"];
-           echo $_SESSION["username"];
+            echo $_SESSION["username"];
             // echo "<script>alert('Login Berhasil');window.location='index.php';</script>";
-            // header("location:index.php");
+            header("location:index.php");
         } else {
             echo "Login Gagal";
         }
